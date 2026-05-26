@@ -18,7 +18,7 @@ export default function Nav() {
     <nav className="border-b border-neutral-800 sticky top-0 bg-neutral-950/80 backdrop-blur z-50">
       <div className="max-w-4xl mx-auto px-6 py-4 flex items-center text-sm">
         <Link href="/" className="font-semibold text-neutral-100">
-          Michail
+          Michail Timanov
         </Link>
 
         {/* Desktop links */}
