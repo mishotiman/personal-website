@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({
   variable: "--font-inter",
