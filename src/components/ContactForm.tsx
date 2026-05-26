@@ -89,7 +89,7 @@ export default function ContactForm() {
             </div>
 
             {/* Honeypot - hidden from humans, bots fill it */}
-            <div className="absolute -left-[9px]" aria-hidden="true">
+            <div className="absolute -left-[9999px]" aria-hidden="true">
                 <label htmlFor="website">Website (leave blank)</label>
                 <input
                     id="website"
