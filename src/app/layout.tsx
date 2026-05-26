@@ -32,6 +32,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${newsreader.variable} font-sans antialiased bg-neutral-950 text-neutral-100`}>
         <Nav />
         {children}
+        <Analytics />
       </body>
     </html>
   );
