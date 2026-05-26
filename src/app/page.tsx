@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ContactForm from "@/components/ContactForm";
 
 // React component. A JS function that returns the UI.
 // responsive, modern UI, thanks to Next.js
@@ -230,22 +231,28 @@ export default function Home() {
           Get in touch.
         </h2>
         <p className="text-neutral-400 max-w-2xl mb-6">
-          If you want to connect with me, please use the links below to reach me.
+          If you want to connect with me, please use the contact form or links below.
         </p>
-        <a
-          href="mailto:mishotiman@gmail.com"
-          className="inline-block border border-neutral-700 px-5 py-2.5 rounded-md text-sm hover:bg-neutral-900 transition"
-        >
-          mishotiman@gmail.com
-        </a>
-        <a
-          href="https://www.instagram.com/mishotiman/"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-block border border-neutral-700 px-5 py-2.5 rounded-md text-sm hover:bg-neutral-900 transition"
-        >
-          Instagram
-        </a>
+
+        <ContactForm />
+
+        <p className="text-sm text-neutral-500 mt-10 mb-3">Links:</p>
+        <div className="flex flex-wrap gap-3">
+          <a
+            href="mailto:mishotiman@gmail.com"
+            className="inline-block border border-neutral-700 px-5 py-2.5 rounded-md text-sm hover:bg-neutral-900 transition"
+          >
+            mishotiman@gmail.com
+          </a>
+          <a
+            href="https://www.instagram.com/mishotiman/"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block border border-neutral-700 px-5 py-2.5 rounded-md text-sm hover:bg-neutral-900 transition"
+          >
+            Instagram
+          </a>
+        </div>
       </section>
 
       <footer className="border-t border-neutral-800 py-10 text-sm text-neutral-500 text-center">
