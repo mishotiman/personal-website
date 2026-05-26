@@ -230,13 +230,21 @@ export default function Home() {
           Get in touch.
         </h2>
         <p className="text-neutral-400 max-w-2xl mb-6">
-          The easiest way to reach me is by email. A proper form is coming soon.
+          If you want to connect with me, please use the links below to reach me.
         </p>
         <a
           href="mailto:mishotiman@gmail.com"
           className="inline-block border border-neutral-700 px-5 py-2.5 rounded-md text-sm hover:bg-neutral-900 transition"
         >
           mishotiman@gmail.com
+        </a>
+        <a
+          href="https://www.instagram.com/mishotiman/"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-block border border-neutral-700 px-5 py-2.5 rounded-md text-sm hover:bg-neutral-900 transition"
+        >
+          Instagram
         </a>
       </section>
 
