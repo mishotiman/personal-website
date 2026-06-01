@@ -2,7 +2,6 @@ import type { NextConfig } from "next";
 import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
-  // Allow .mdx files to be treated as pages/content
   pageExtensions: ["ts", "tsx", "md", "mdx"],
   images: {
     remotePatterns: [
