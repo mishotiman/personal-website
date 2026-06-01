@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
+import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
-    images: {
+  // Allow .mdx files to be treated as pages/content
+  pageExtensions: ["ts", "tsx", "md", "mdx"],
+  images: {
     remotePatterns: [
       {
         protocol: "https",
@@ -11,4 +14,8 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+const withMDX = createMDX({
+  extension: /\.mdx?$/,
+});
+
+export default withMDX(nextConfig);
