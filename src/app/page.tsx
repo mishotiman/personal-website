@@ -10,34 +10,34 @@ export default function Home() {
       <section className="min-h-[85vh] flex flex-col md:flex-row items-center gap-12 py-20">
         {/* TEXT */}
         <div className="flex-1">
-          <p className="text-sm uppercase tracking-widest text-red-400 mb-6">
+          <p className="text-sm uppercase tracking-widest text-[#1a2b4a] mb-6">
             Manifesto
           </p>
           <h1 className="font-serif text-5xl md:text-7xl font-semibold tracking-tight leading-[1.05]">
             Knocked down. <br /> Came back up. <br /> Stronger.
           </h1>
-          <p className="mt-8 text-lg text-neutral-400 max-w-xl">
+          <p className="mt-8 text-lg text-[#6b6b66] max-w-xl">
             Autoimmune disease. Crippling anxiety. Depression. I climbed out of
             all of them by rebuilding my body and mind from the ground up.
             Here's what worked.
           </p>
-          <div className="mt-10 flex gap-5 text-sm text-neutral-400">
+          <div className="mt-10 flex gap-5 text-sm text-[#6b6b66]">
             <a
               href="https://www.instagram.com/mishotiman/"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-neutral-100 transition"
+              className="hover:text-[#1a2b4a] transition"
             >
               Instagram
             </a>
-            <a href="#contact" className="hover:text-neutral-100 transition">
+            <a href="#contact" className="hover:text-[#1a2b4a] transition">
               Email
             </a>
           </div>
         </div>
 
         {/* PORTRAIT */}
-        <div className="w-56 h-56 md:w-72 md:h-72 shrink-0 rounded-full overflow-hidden border border-neutral-800">
+        <div className="w-56 h-56 md:w-72 md:h-72 shrink-0 rounded-full overflow-hidden border border-[#e5e1d8]">
           <Image
             src="https://dzpz47k6dvo72.cloudfront.net/profile-photo.jpg"
             alt="Michail portrait"
@@ -50,17 +50,17 @@ export default function Home() {
       </section>
 
       {/* DIVIDER */}
-      <div className="border-t border-neutral-800" />
+      <div className="border-t border-[#e5e1d8]" />
 
       {/* ABOUT */}
       <section id="about" className="py-24">
-        <p className="text-sm uppercase tracking-widest text-red-400 mb-4">
+        <p className="text-sm uppercase tracking-widest text-[#1a2b4a] mb-4">
           About
         </p>
         <h2 className="font-serif text-3xl md:text-4xl font-semibold tracking-tight mb-8">
           The short version.
         </h2>
-        <div className="space-y-5 text-lg text-neutral-300 leading-relaxed max-w-2xl">
+        <div className="space-y-5 text-lg text-[#3d3d3a] leading-relaxed max-w-2xl">
           <p>
             My name is Michail. At 17, I was a teenager obsessed with strength
             training, gaining 24+ kg of muscle in two and a half years. At 20, I
@@ -85,17 +85,17 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="border-t border-neutral-800" />
+      <div className="border-t border-[#e5e1d8]" />
 
       {/* ACHIEVEMENTS */}
       <section id="achievements" className="py-24">
-        <p className="text-sm uppercase tracking-widest text-red-400 mb-4">
+        <p className="text-sm uppercase tracking-widest text-[#1a2b4a] mb-4">
           Achievements
         </p>
         <h2 className="font-serif text-3xl md:text-4xl font-semibold tracking-tight mb-8">
           Highlights from my road so far.
         </h2>
-        <ul className="space-y-3 text-neutral-300 max-w-2xl list-disc list-outside pl-6 marker:text-red-400">
+        <ul className="space-y-3 text-[#3d3d3a] max-w-2xl list-disc list-outside pl-6 marker:text-[#1a2b4a]">
           <li>Gained 24+ kg muscle mass in 2.5 years in high school.</li>
           <li>
             Regained 10+ kg muscle mass in 3 years with an active autoimmune
@@ -119,32 +119,32 @@ export default function Home() {
         </ul>
       </section>
 
-      <div className="border-t border-neutral-800" />
+      <div className="border-t border-[#e5e1d8]" />
 
       {/* CONTRIBUTIONS */}
       <section id="contributions" className="py-24">
-        <p className="text-sm uppercase tracking-widest text-red-400 mb-4">
+        <p className="text-sm uppercase tracking-widest text-[#1a2b4a] mb-4">
           Contributions
         </p>
         <h2 className="font-serif text-3xl md:text-4xl font-semibold tracking-tight mb-8">
           How I&apos;ve helped people around me.
         </h2>
-        <p className="text-neutral-400 max-w-2xl mb-10">
+        <p className="text-[#6b6b66] max-w-2xl mb-10">
           A growing list of ways I&apos;ve contributed to the people around me.
         </p>
-        <ul className="space-y-3 text-neutral-300 max-w-2xl list-disc list-outside pl-6 marker:text-red-400">
+        <ul className="space-y-3 text-[#3d3d3a] max-w-2xl list-disc list-outside pl-6 marker:text-[#1a2b4a]">
           <li>
-            <strong className="text-neutral-100">Training:</strong> Coached 10+
+            <strong className="text-[#2a2a28]">Training:</strong> Coached 10+
             people on building strength, hypertrophy, and/or achieving
             particular Calisthenics goals.
           </li>
           <li>
-            <strong className="text-neutral-100">Nutrition:</strong> Guided 10+
+            <strong className="text-[#2a2a28]">Nutrition:</strong> Guided 10+
             people toward healthier eating habits tailored to their goals and
             individual lifestyle.
           </li>
           <li>
-            <strong className="text-neutral-100">Empowerment:</strong> Empowered
+            <strong className="text-[#2a2a28]">Empowerment:</strong> Empowered
             ~100 people to change an existing habit or start a new one, by
             providing them with science-backed tools. (e.g., in training,
             morning practice, meditation, sleep, stress management, mindset)
@@ -152,11 +152,11 @@ export default function Home() {
         </ul>
       </section>
 
-      <div className="border-t border-neutral-800" />
+      <div className="border-t border-[#e5e1d8]" />
 
       {/* INTERESTS */}
       <section id="interests" className="py-24">
-        <p className="text-sm uppercase tracking-widest text-red-400 mb-4">
+        <p className="text-sm uppercase tracking-widest text-[#1a2b4a] mb-4">
           Interests
         </p>
         <h2 className="font-serif text-3xl md:text-4xl font-semibold tracking-tight mb-8">
@@ -165,25 +165,25 @@ export default function Home() {
 
         {/* Chips */}
         <div className="flex flex-wrap gap-2 mb-12">
-          <span className="border border-neutral-700 rounded-full px-4 py-1.5 text-sm text-neutral-300">
+          <span className="border border-[#d8d3c8] rounded-full px-4 py-1.5 text-sm text-[#3d3d3a]">
             Strength Training
           </span>
-          <span className="border border-neutral-700 rounded-full px-4 py-1.5 text-sm text-neutral-300">
+          <span className="border border-[#d8d3c8] rounded-full px-4 py-1.5 text-sm text-[#3d3d3a]">
             HRV & Cardio Training
           </span>
-          <span className="border border-neutral-700 rounded-full px-4 py-1.5 text-sm text-neutral-300">
+          <span className="border border-[#d8d3c8] rounded-full px-4 py-1.5 text-sm text-[#3d3d3a]">
             Longevity
           </span>
-          <span className="border border-neutral-700 rounded-full px-4 py-1.5 text-sm text-neutral-300">
+          <span className="border border-[#d8d3c8] rounded-full px-4 py-1.5 text-sm text-[#3d3d3a]">
             Peak Performance
           </span>
-          <span className="border border-neutral-700 rounded-full px-4 py-1.5 text-sm text-neutral-300">
+          <span className="border border-[#d8d3c8] rounded-full px-4 py-1.5 text-sm text-[#3d3d3a]">
             Happiness
           </span>
-          <span className="border border-neutral-700 rounded-full px-4 py-1.5 text-sm text-neutral-300">
+          <span className="border border-[#d8d3c8] rounded-full px-4 py-1.5 text-sm text-[#3d3d3a]">
             Empowerment & Leadership
           </span>
-          <span className="border border-neutral-700 rounded-full px-4 py-1.5 text-sm text-neutral-300">
+          <span className="border border-[#d8d3c8] rounded-full px-4 py-1.5 text-sm text-[#3d3d3a]">
             The Brain & Consciousness
           </span>
         </div>
@@ -192,7 +192,7 @@ export default function Home() {
         <div className="space-y-8 max-w-2xl">
           <div>
             <h3 className="font-semibold text-lg mb-2">Strength Training</h3>
-            <p className="text-neutral-400 leading-relaxed">
+            <p className="text-[#6b6b66] leading-relaxed">
               I started doing Calisthenics in 2017. Alongside that, I was
               curious to learn how to gain strength and hypertrophy, and do so
               fast. Over the years, I have learned the best scientifically
@@ -206,7 +206,7 @@ export default function Home() {
             <h3 className="font-semibold text-lg mb-2">
               HRV & Aerobic Training
             </h3>
-            <p className="text-neutral-400 leading-relaxed">
+            <p className="text-[#6b6b66] leading-relaxed">
               It wasn't until I got myself a WHOOP band that I started caring
               about Heart Rate Variability (HRV) more. It is a great indicator
               of how your nervous system and body are performing. The higher the
@@ -225,7 +225,7 @@ export default function Home() {
           </div>
           <div>
             <h3 className="font-semibold text-lg mb-2">Longevity</h3>
-            <p className="text-neutral-400 leading-relaxed">
+            <p className="text-[#6b6b66] leading-relaxed">
               When I was in my teenage years, I had a particular fear that
               something may be wrong with my heart. It was an irrational thought
               since all the doctors were telling me my heart is in perfect
@@ -245,7 +245,7 @@ export default function Home() {
           </div>
           <div>
             <h3 className="font-semibold text-lg mb-2">Peak Performance</h3>
-            <p className="text-neutral-400 leading-relaxed">
+            <p className="text-[#6b6b66] leading-relaxed">
               "What is the difference between being 1st and being in the top
               10?", I asked myself at the age of 19. Actually, my relationship
               with peak performance starts way back in primary school when I got
@@ -261,7 +261,7 @@ export default function Home() {
           </div>
           <div>
             <h3 className="font-semibold text-lg mb-2">Happiness</h3>
-            <p className="text-neutral-400 leading-relaxed">
+            <p className="text-[#6b6b66] leading-relaxed">
               How many of us can sit alone, quietly with ourselves, and feel
               okay with ourselves and with our life? Feel like we are doing
               enough, like we are enough? From my experience, talking to other
@@ -285,7 +285,7 @@ export default function Home() {
             <h3 className="font-semibold text-lg mb-2">
               Empowerment & Leadership
             </h3>
-            <p className="text-neutral-400 leading-relaxed">
+            <p className="text-[#6b6b66] leading-relaxed">
               Plenty of us feel like we are "weak" - a sense that life is
               happening to us, and we don't have much control over it. We can't
               achieve our dream physique, we can't have our dream job, we can't
@@ -307,7 +307,7 @@ export default function Home() {
             <h3 className="font-semibold text-lg mb-2">
               The Brain & Consciousness
             </h3>
-            <p className="text-neutral-400 leading-relaxed">
+            <p className="text-[#6b6b66] leading-relaxed">
               Some people go through life without really appreciating the
               magnificence and perplexity of consciousness and the human brain.
               The eye-opening moment for me was during my final year of high
@@ -332,28 +332,28 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="border-t border-neutral-800" />
+      <div className="border-t border-[#e5e1d8]" />
 
       {/* CONTACT */}
       <section id="contact" className="py-24">
-        <p className="text-sm uppercase tracking-widest text-red-400 mb-4">
+        <p className="text-sm uppercase tracking-widest text-[#1a2b4a] mb-4">
           Contact
         </p>
         <h2 className="font-serif text-3xl md:text-4xl font-semibold tracking-tight mb-8">
           Get in touch.
         </h2>
-        <p className="text-neutral-400 max-w-2xl mb-6">
+        <p className="text-[#6b6b66] max-w-2xl mb-6">
           If you want to connect with me, please use the contact form or links
           below.
         </p>
 
         <ContactForm />
 
-        <p className="text-sm text-neutral-500 mt-10 mb-3">Links:</p>
+        <p className="text-sm text-[#8a8a83] mt-10 mb-3">Links:</p>
         <div className="flex flex-wrap gap-3">
           <a
             href="mailto:mishotiman@gmail.com"
-            className="inline-block border border-neutral-700 px-5 py-2.5 rounded-md text-sm hover:bg-neutral-900 transition"
+            className="inline-block border border-[#d8d3c8] px-5 py-2.5 rounded-md text-sm hover:bg-[#f0ece3] transition"
           >
             mishotiman@gmail.com
           </a>
@@ -361,14 +361,14 @@ export default function Home() {
             href="https://www.instagram.com/mishotiman/"
             target="_blank"
             rel="noreferrer"
-            className="inline-block border border-neutral-700 px-5 py-2.5 rounded-md text-sm hover:bg-neutral-900 transition"
+            className="inline-block border border-[#d8d3c8] px-5 py-2.5 rounded-md text-sm hover:bg-[#f0ece3] transition"
           >
             Instagram
           </a>
         </div>
       </section>
 
-      <footer className="border-t border-neutral-800 py-10 text-sm text-neutral-500 text-center">
+      <footer className="border-t border-[#e5e1d8] py-10 text-sm text-[#8a8a83] text-center">
         © {new Date().getFullYear()} Michail. Build the body & mind. Built with
         Next.js.
       </footer>

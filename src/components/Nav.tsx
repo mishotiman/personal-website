@@ -16,19 +16,19 @@ export default function Nav() {
   ];
 
   return (
-    <nav className="border-b border-neutral-800 sticky top-0 bg-neutral-950/80 backdrop-blur z-50">
+    <nav className="sticky top-0 bg-[#1a2b4a] z-50">
       <div className="max-w-4xl mx-auto px-6 py-4 flex items-center text-sm">
-        <Link href="/" className="font-semibold text-neutral-100">
+        <Link href="/" className="font-semibold text-white">
           Michail Timanov
         </Link>
 
         {/* Desktop links */}
-        <div className="hidden md:flex gap-5 ml-auto text-neutral-400">
+        <div className="hidden md:flex gap-5 ml-auto text-white/70">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="hover:text-neutral-100 transition"
+              className="hover:text-white transition"
             >
               {link.label}
             </Link>
@@ -38,7 +38,7 @@ export default function Nav() {
         {/* Mobile hamburger button */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden ml-auto text-neutral-300 hover:text-neutral-100 transition"
+          className="md:hidden ml-auto text-white/70 hover:text-white transition"
           aria-label="Toggle menu"
         >
           {open ? (
@@ -74,14 +74,14 @@ export default function Nav() {
 
       {/* Mobile dropdown panel */}
       {open && (
-        <div className="md:hidden border-t border-neutral-800 bg-neutral-950">
-          <div className="max-w-4xl mx-auto px-6 py-4 flex flex-col gap-4 text-neutral-400">
+        <div className="md:hidden border-t border-white/15 bg-[#1a2b4a]">
+          <div className="max-w-4xl mx-auto px-6 py-4 flex flex-col gap-4 text-white/70">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="hover:text-neutral-100 transition"
+                className="hover:text-white transition"
               >
                 {link.label}
               </Link>
