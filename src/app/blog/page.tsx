@@ -15,7 +15,7 @@ export default function BlogIndex() {
         Blog
       </p>
       <h1 className="font-serif text-4xl md:text-5xl font-semibold tracking-tight mb-12">
-        Short articles where I share my thoughts on different topics.
+        Here I share my knowledge, thoughts, and experience on various topics.
       </h1>
 
       {posts.length === 0 ? (
