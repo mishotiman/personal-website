@@ -1,26 +1,24 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import { getPostBySlug, getAllSlugs } from "@/lib/posts";
+import { PortableText } from "@portabletext/react";
+import { getPostBySlug, getAllSlugs } from "@/lib/sanity-posts";
 
-// Pre-generate a page for each post at build time
-export function generateStaticParams() {
-  return getAllSlugs().map((slug) => ({ slug }));
+export const revalidate = 10; // re-fetch from Sanity at most every 60 seconds
+
+export async function generateStaticParams() {
+  const slugs = await getAllSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
-// Dynamic <title> per post
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  try {
-    const post = getPostBySlug(slug);
-    return { title: `${post.title} — Michail`, description: post.summary };
-  } catch {
-    return { title: "Post not found" };
-  }
+  const post = await getPostBySlug(slug);
+  if (!post) return { title: "Post not found" };
+  return { title: `${post.title} — Michail`, description: post.summary };
 }
 
 export default async function PostPage({
@@ -29,11 +27,9 @@ export default async function PostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  const post = await getPostBySlug(slug);
 
-  let post;
-  try {
-    post = getPostBySlug(slug);
-  } catch {
+  if (!post) {
     notFound();
   }
 
@@ -43,17 +39,19 @@ export default async function PostPage({
         href="/blog"
         className="text-sm text-[#8a8a83] hover:text-[#1a2b4a] transition"
       >
-        ← Back to writing
+        ← Back to blog
       </Link>
 
       <article className="mt-10">
-        <p className="text-sm text-[#8a8a83] mb-3">{formatDate(post.date)}</p>
+        <p className="text-sm text-[#8a8a83] mb-3">
+          {formatDate(post.publishedAt)}
+        </p>
         <h1 className="font-serif text-4xl md:text-5xl font-semibold tracking-tight leading-tight mb-10">
           {post.title}
         </h1>
 
-        <div className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:tracking-tight prose-a:text-red-400 prose-a:no-underline hover:prose-a:underline">
-          <MDXRemote source={post.content} />
+        <div className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:tracking-tight prose-a:text-[#1a2b4a] prose-a:no-underline hover:prose-a:underline">
+          <PortableText value={post.body} />
         </div>
       </article>
     </main>

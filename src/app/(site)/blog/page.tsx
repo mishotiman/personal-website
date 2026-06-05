@@ -1,13 +1,15 @@
 import Link from "next/link";
-import { getAllPosts } from "@/lib/posts";
+import { getAllPosts } from "@/lib/sanity-posts";
+
+export const revalidate = 10; // re-fetch from Sanity at most every 60 seconds
 
 export const metadata = {
   title: "Blog",
   description: "Short articles on health, performance, and the mind.",
 };
 
-export default function BlogIndex() {
-  const posts = getAllPosts();
+export default async function BlogIndex() {
+  const posts = await getAllPosts();
 
   return (
     <main className="max-w-3xl mx-auto px-6 py-24">
@@ -29,7 +31,7 @@ export default function BlogIndex() {
                 className="group block -mx-5 px-5 py-5 rounded-lg hover:bg-[#1a2b4a]/5 transition-colors"
               >
                 <p className="text-sm text-[#8a8a83] mb-1">
-                  {formatDate(post.date)}
+                  {formatDate(post.publishedAt)}
                 </p>
                 <h2 className="font-serif text-2xl font-semibold tracking-tight group-hover:text-[#1a2b4a] transition-colors">
                   {post.title}
