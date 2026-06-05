@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/Nav";
-import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -28,11 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+        suppressHydrationWarning
         className={`${inter.variable} ${newsreader.variable} font-sans antialiased bg-[#faf8f5] text-[#2a2a28]`}
       >
-        <Nav />
         {children}
-        <Analytics />
       </body>
     </html>
   );
