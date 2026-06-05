@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { PortableText } from "@portabletext/react";
 import { getPostBySlug, getAllSlugs } from "@/lib/sanity-posts";
 
+export const revalidate = 10; // re-fetch from Sanity at most every 60 seconds
+
 export async function generateStaticParams() {
   const slugs = await getAllSlugs();
   return slugs.map((slug) => ({ slug }));

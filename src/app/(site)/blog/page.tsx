@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/sanity-posts";
 
+export const revalidate = 10; // re-fetch from Sanity at most every 60 seconds
+
 export const metadata = {
   title: "Blog",
   description: "Short articles on health, performance, and the mind.",
