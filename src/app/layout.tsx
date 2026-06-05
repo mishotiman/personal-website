@@ -13,9 +13,20 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  title: "Michail — Build the body & mind",
+  metadataBase: new URL("https://mishotiman.com"),
+  title: {
+    default: "Michail Timanov — Health and Wellbeing Principles",
+    template: "%s — Michail Timanov", // child pages fill %s
+  },
   description:
-    "I climbed back from autoimmune disease, anxiety, and depression by rebuilding my body and mind. Here's what worked.",
+    "I climbed back from autoimmune disease, anxiety, and depression. Here are the principles for better health and wellbeing.",
+  openGraph: {
+    type: "website",
+    siteName: "Michail Timanov",
+    locale: "en_US",
+    url: "https://mishotiman.com",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({
