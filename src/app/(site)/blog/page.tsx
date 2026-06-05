@@ -4,8 +4,8 @@ import { getAllPosts } from "@/lib/sanity-posts";
 export const revalidate = 10; // re-fetch from Sanity at most every 60 seconds
 
 export const metadata = {
-  title: "Blog",
-  description: "Short articles on health, performance, and the mind.",
+  title: "Blog — Michail Timanov",
+  description: "Health and wellbeing principles, summarized in short articles.",
 };
 
 export default async function BlogIndex() {

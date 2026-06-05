@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PortableText } from "@portabletext/react";
 import { getPostBySlug, getAllSlugs } from "@/lib/sanity-posts";
 
-export const revalidate = 10; // re-fetch from Sanity at most every 60 seconds
+export const revalidate = 10; // re-fetch from Sanity at most every 10 seconds
 
 export async function generateStaticParams() {
   const slugs = await getAllSlugs();
@@ -14,11 +15,21 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
-}) {
+}): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
   if (!post) return { title: "Post not found" };
-  return { title: `${post.title} — Michail`, description: post.summary };
+  return {
+    title: post.title, // → "My Post — Michail Timanov" via template
+    description: post.summary,
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.summary,
+      publishedTime: post.publishedAt,
+      url: `https://mishotiman.com/blog/${slug}`,
+    },
+  };
 }
 
 export default async function PostPage({
