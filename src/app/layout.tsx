@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s — Michail Timanov", // child pages fill %s
   },
   description:
-    "I climbed back from autoimmune disease, anxiety, and depression. Here are the principles for better health and wellbeing.",
+    "I climbed back from autoimmune disease, anxiety, and depression. Here are the principles for health and wellbeing.",
   openGraph: {
     type: "website",
     siteName: "Michail Timanov",
